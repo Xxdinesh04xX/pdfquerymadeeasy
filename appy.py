@@ -7,7 +7,7 @@ client = Groq(
     api_key="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",
 )
 
-st.title("PDF Content Analyzer with Groq Cloud")
+st.title("PDF Content Analyzer")
 
 # Add a sidebar button for history
 show_history = st.sidebar.button("Show History")
@@ -34,7 +34,7 @@ if uploaded_pdf is not None:
             pdf_content += text + "\n\n"
 
     # Analyze PDF content with Groq Cloud when button is pressed
-    if st.button("Analyze PDF Content with Groq Cloud"):
+    if st.button("Analyze PDF Content"):
         # Send the PDF content to Groq Cloud for analysis
         full_prompt = f"Document content:\n\n{pdf_content}\n\nAnalyze and summarize the document."
         
